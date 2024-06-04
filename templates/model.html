@@ -1,0 +1,45 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<div class="container d-flex justify-content-center mt-5">
+    <h1>Select Model You want to use for PREDICTION</h1>
+</div>
+
+<div class="container d-flex justify-content-center mt-5">
+    <!-- <form action = '/create-model' method = 'POST'>
+        <div class="btn-group">
+
+            <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Select Model to Train
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" value = 'RFC'>Random Forest Predictor</a>
+                <a class="dropdown-item" value = 'DTC'>Decision Tree Predictor</a>
+                <a class="dropdown-item" value = 'LR' >Logistic Regression</a>
+            </div>
+        </div>
+    </form> -->
+
+    <div class="container mt-5">
+        <form action="/create-model" method="POST">
+          <div class="form-group">
+            <label for="Model_Selection">Select an option:</label>
+            <select class="form-control" name="Model_Selection" name="option">
+              <option value="RFC">Random Forest Predictor</option>
+              <option value="DTC">Decision Tree Predictor</option>
+              <option value="LR" >Logistic Regression</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+</div>
+
+
+<div class="container d-flex justify-content-center mt-5">
+    {{accuracy_model}}
+</div>
+
+{%endblock%}

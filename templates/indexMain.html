@@ -1,0 +1,28 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<div class = 'container'>
+    <div class = 'text-center'>
+        <img src = "https://freepngimg.com/save/167647-vector-think-free-download-png-hd/1667x1667" alt = "thinking-guy" width="150"
+    height="150">
+    </div>
+</div>
+
+<div class='container'>
+    <div class='text-center'>
+        <h2>How Does It work</h2>
+    </div>
+    <p>The Prediction's Machine Learning Algorithm is trained with a DATASETS which includes 3 different attributes - Oxygen  , Temperature and Humidity.</p>
+    <p>
+        Dataset used for prediction contains 87 distinct data-rows.
+        Users can choose what kind of model they want for prediction. Each Model has different accuracy. Users Can choose one with higher accuracy.
+    </p>
+    <p>
+        Data entered by user is then fed to the model to predict the outcome.
+        After prediction a prompt will be generated to check if the predicted value is correct or not.
+        According to user response the entered data is then added to the orignal dataset with the correct output to increase the accuracy of the model.
+    </p>
+</div>
+
+{%endblock%}

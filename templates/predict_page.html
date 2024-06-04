@@ -1,0 +1,44 @@
+{% extends 'index.html' %} {% block content %}
+
+<div class="container mt-4">
+  <h1>Input Fields</h1>
+  <form action="/predict-fire" method="POST">
+    <div class="form-group">
+      <label for="input3"></label>
+      <input
+        type="number"
+        class="form-control"
+        name="Temperature"
+        placeholder="Enter Temperature"
+        min="1"
+      />
+    </div>
+    <div class="form-group">
+      <label for="input3"></label>
+      <input
+        type="number"
+        class="form-control"
+        name="Oxygen"
+        placeholder="Enter Oxygen"
+        min="1"
+      />
+    </div>
+    <div class="form-group">
+      <label for="input3"></label>
+      <input
+        type="number"
+        class="form-control"
+        name="Humidity"
+        placeholder="Enter Humidity"
+        min="1"
+      />
+    </div>
+
+<div class = "container">
+    <button type = "submit">Submit</button>
+</div>
+
+<div class="container d-flex justify-content-center mt-5">
+  <h3>{{prediction_fire}}</h3>
+</div>
+{%endblock%}
